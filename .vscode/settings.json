@@ -1,7 +1,9 @@
 {
     "cSpell.words": [
         "editorconfig",
-        "markdownlint"
+        "markdownlint",
+        "submodule",
+        "submodules"
     ],
 
     "files.associations": {
