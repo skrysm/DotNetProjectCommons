@@ -81,6 +81,7 @@ Validate.ArgumentWithName($NAME$).IsNotNull($EXPR$);</s:String>
 	<s:String x:Key="/Default/CodeInspection/Highlighting/InspectionSeverities/=MustUseReturnValue/@EntryIndexedValue">ERROR</s:String>
 	<s:String x:Key="/Default/CodeInspection/Highlighting/InspectionSeverities/=NotAccessedField_002ELocal/@EntryIndexedValue">ERROR</s:String>
 	<s:String x:Key="/Default/CodeInspection/Highlighting/InspectionSeverities/=NotResolvedInText/@EntryIndexedValue">ERROR</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/InspectionSeverities/=ParameterTypeCanBeEnumerable_002ELocal/@EntryIndexedValue">SUGGESTION</s:String>
 	<s:String x:Key="/Default/CodeInspection/Highlighting/InspectionSeverities/=PossibleNullReferenceException/@EntryIndexedValue">ERROR</s:String>
 	<s:String x:Key="/Default/CodeInspection/Highlighting/InspectionSeverities/=RedundantArgumentDefaultValue/@EntryIndexedValue">HINT</s:String>
 	<s:String x:Key="/Default/CodeInspection/Highlighting/InspectionSeverities/=RedundantAssignment/@EntryIndexedValue">ERROR</s:String>
