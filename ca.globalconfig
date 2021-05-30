@@ -90,6 +90,11 @@ dotnet_diagnostic.CA1716.severity = none
 #   the enum is a nested enum and there's a property for that enum in the outer class.
 dotnet_diagnostic.CA1717.severity = none
 
+# CA1822: Mark members as static
+# Reason: This is already covered by ReSharper. By disabling it we may save some analysis time and don't let it
+# break the build.
+dotnet_diagnostic.CA1822.severity = none
+
 # CA2225: Operator overloads have named alternates
 # Reason: This rule is "nice" but makes writing operators more cumbersome. The primary reason for this rule
 #   is "It's provided for developers who program in languages that do not support overloaded operators." but
