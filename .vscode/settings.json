@@ -8,7 +8,7 @@
 
     "files.associations": {
         "*.DotSettings": "xml",
-        "ca.globalconfig": "ini",
+        "*.globalconfig": "ini",
     },
 
     "markdownlint.config": {

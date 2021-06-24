@@ -1,25 +1,6 @@
 #################################################################################
 #
-# .NET Code Style Configurations
-#
-# For details, see: https://docs.microsoft.com/en-us/dotnet/fundamentals/code-analysis/configuration-files?view=vs-2019#global-analyzerconfig
-#
-# You can find the latest version of this file here: https://github.com/skrysmanski/AppMotor.StyleGuide
-#
-#################################################################################
-
-is_global = true
-
-dotnet_style_qualification_for_field = true:suggestion
-dotnet_style_qualification_for_property = true:suggestion
-dotnet_style_qualification_for_method = false:suggestion
-dotnet_style_qualification_for_event = true:suggestion
-
-dotnet_sort_system_directives_first = true:suggestion
-dotnet_separate_import_directive_groups = true:suggestion
-
-#
-# Code analysis rules
+# .NET Code Analysis (CA) Rules
 #
 # For configuration options, see: https://docs.microsoft.com/en-us/dotnet/fundamentals/code-analysis/configuration-options
 #
@@ -27,6 +8,13 @@ dotnet_separate_import_directive_groups = true:suggestion
 #
 # The Roslyn Analyzers project: https://github.com/dotnet/roslyn-analyzers
 #
+# For details on this file type, see: https://docs.microsoft.com/en-us/dotnet/fundamentals/code-analysis/configuration-files?view=vs-2019#global-analyzerconfig
+#
+# You can find the latest version of this file here: https://github.com/skrysmanski/AppMotor.StyleGuide
+#
+#################################################################################
+
+is_global = true
 
 # CA1031: Do not catch general exception types
 # Reason: There are lots of places (especially in reusable library code) that make catching "Exception"
