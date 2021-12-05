@@ -83,6 +83,10 @@ dotnet_diagnostic.CA1717.severity = none
 # break the build.
 dotnet_diagnostic.CA1822.severity = none
 
+# CA1848: Use the LoggerMessage delegates
+# Reason: Disabled by default because it's rather situational and because it's not currently documented.
+dotnet_diagnostic.CA1848.severity = none
+
 # CA2225: Operator overloads have named alternates
 # Reason: This rule is "nice" but makes writing operators more cumbersome. The primary reason for this rule
 #   is "It's provided for developers who program in languages that do not support overloaded operators." but
