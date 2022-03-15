@@ -54,6 +54,7 @@ Validate.ArgumentWithName($NAME$).IsNotNull($EXPR$);</s:String>
 	<s:String x:Key="/Default/CodeInspection/Highlighting/InspectionSeverities/=CommentTypo/@EntryIndexedValue">HINT</s:String>
 	<s:String x:Key="/Default/CodeInspection/Highlighting/InspectionSeverities/=ConditionIsAlwaysTrueOrFalse/@EntryIndexedValue">ERROR</s:String>
 	<s:String x:Key="/Default/CodeInspection/Highlighting/InspectionSeverities/=ConvertIfStatementToConditionalTernaryExpression/@EntryIndexedValue">HINT</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/InspectionSeverities/=ConvertIfStatementToNullCoalescingAssignment/@EntryIndexedValue">HINT</s:String>
 	<s:String x:Key="/Default/CodeInspection/Highlighting/InspectionSeverities/=ConvertIfStatementToSwitchStatement/@EntryIndexedValue">HINT</s:String>
 	<s:String x:Key="/Default/CodeInspection/Highlighting/InspectionSeverities/=ConvertToConstant_002ELocal/@EntryIndexedValue">SUGGESTION</s:String>
 	<s:String x:Key="/Default/CodeInspection/Highlighting/InspectionSeverities/=EnforceDoWhileStatementBraces/@EntryIndexedValue">WARNING</s:String>
