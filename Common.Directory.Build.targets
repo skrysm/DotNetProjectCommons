@@ -1,0 +1,11 @@
+﻿<!--
+
+  This .props file must be imported from the 'Directory.Build.targets' file in the repository's root directory.
+
+-->
+<Project>
+
+  <!-- Automatically import "_Post.props" files from the "_ProjectCommons" directory. -->
+  <Import Project="$(MSBuildThisFileDirectory)*_Post.props" />
+
+</Project>

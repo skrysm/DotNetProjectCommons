@@ -1,0 +1,15 @@
+﻿<!--
+
+  This .props file must be imported from the 'Directory.Build.props' file in the repository's root directory.
+
+-->
+<Project>
+
+  <PropertyGroup>
+    <ProjectsRootDirectory Condition=" '$(ProjectsRootDirectory)' == '' ">$(MSBuildThisFileDirectory)../</ProjectsRootDirectory>
+
+    <!-- This directory contains all shared/common .props (and related) files. -->
+    <ProjectCommonsDirectory>$(MSBuildThisFileDirectory)</ProjectCommonsDirectory>
+  </PropertyGroup>
+
+</Project>
