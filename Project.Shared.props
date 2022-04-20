@@ -97,7 +97,7 @@
 
   <ItemGroup Label="StyleGuide">
     <!-- This file specifies all styleguide rules (for Visual Studio). -->
-    <GlobalAnalyzerConfigFiles Include="$(ProjectsRootDirectory)_StyleGuide/StyleGuide.globalconfig" />
+    <GlobalAnalyzerConfigFiles Include="$(MSBuildThisFileDirectory)StyleGuide.globalconfig" />
   </ItemGroup>
 
 </Project>
