@@ -80,7 +80,8 @@ Validate.ArgumentWithName($NAME$).IsNotNull($EXPR$);</s:String>
 	<s:String x:Key="/Default/CodeInspection/Highlighting/InspectionSeverities/=MergeCastWithTypeCheck/@EntryIndexedValue">SUGGESTION</s:String>
 	<s:String x:Key="/Default/CodeInspection/Highlighting/InspectionSeverities/=MethodHasAsyncOverload/@EntryIndexedValue">WARNING</s:String>
 	<s:String x:Key="/Default/CodeInspection/Highlighting/InspectionSeverities/=MissingSpace/@EntryIndexedValue">SUGGESTION</s:String>
-	<s:String x:Key="/Default/CodeInspection/Highlighting/InspectionSeverities/=MultipleSpaces/@EntryIndexedValue">SUGGESTION</s:String>
+	<!-- There are quite a few places where manually aligning code is helpful for readability. So, unfortunately, we have to disable this to make aligning less of a hassle. -->
+	<s:String x:Key="/Default/CodeInspection/Highlighting/InspectionSeverities/=MultipleSpaces/@EntryIndexedValue">DO_NOT_SHOW</s:String>
 	<s:String x:Key="/Default/CodeInspection/Highlighting/InspectionSeverities/=MustUseReturnValue/@EntryIndexedValue">ERROR</s:String>
 	<s:String x:Key="/Default/CodeInspection/Highlighting/InspectionSeverities/=NotAccessedField_002ELocal/@EntryIndexedValue">ERROR</s:String>
 	<s:String x:Key="/Default/CodeInspection/Highlighting/InspectionSeverities/=NotResolvedInText/@EntryIndexedValue">ERROR</s:String>
