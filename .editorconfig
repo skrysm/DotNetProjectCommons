@@ -36,10 +36,36 @@ indent_size = 4
 
 
 #
+# .json files
+#
+[*.json]
+indent_style = tab
+indent_size = 4
+
+
+#
+# .yaml files
+#
+[*.{yml,yaml}]
+indent_size = 2
+
+
+#
 # Windows batch files
 #
 [*.{bat,cmd}]
 end_of_line = crlf
+
+
+#
+# .props files
+#
+[*.{props,targets}]
+# BOM is supported.
+charset = utf-8-bom
+
+# This mirrors the indent size for .csproj files.
+indent_size = 2
 
 
 #
