@@ -103,13 +103,17 @@
 
       You should always mark an assembly as "CLS compliant", if possible (this is also the default in "Project.Code.props").
 
-      The only reason to mark an assembly as "not CLS compliant" is if it's using "not CLS compliant"
-      dependencies that have "public" or "protected" visibility. ASP.NET Core is an example of such a dependency.
+      If you have certain APIs that are not compliant, simply attribute them with the "[CLSCompliant(false)]". This way
+      you don't need to mark the whole assembly as "not compliant".
+
+      You usually should not(!) mark a whole assembly as "not CLS compliant".
 
       To mark this assembly as "not CLS compliant", add the property "<ClsCompliant>false</ClsCompliant>" to
       your project file.
 
-      For details, see: https://docs.microsoft.com/en-us/dotnet/fundamentals/code-analysis/quality-rules/CA1014
+      For details, see:
+      * https://docs.microsoft.com/en-us/dotnet/standard/language-independence
+      * https://docs.microsoft.com/en-us/dotnet/fundamentals/code-analysis/quality-rules/CA1014
     -->
     <AssemblyAttribute Include="System.CLSCompliantAttribute">
         <_Parameter1 Condition=" '$(ClsCompliant)' != 'false' ">true</_Parameter1>
