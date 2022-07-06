@@ -101,23 +101,40 @@
     <!--
       Mark this assembly as "CLS compliant" or "not CLS compliant".
 
-      You should always mark an assembly as "CLS compliant", if possible (this is also the default in "Project.Code.props").
+      "CLS compliant" means that an assembly can be consumed by any .NET language - including F# and
+      VisualBasic.NET. If it's not CLS compliant, it can only be consumed by C# code (at least
+      that's the theory).
 
-      If you have certain APIs that are not compliant, simply attribute them with the "[CLSCompliant(false)]". This way
-      you don't need to mark the whole assembly as "not compliant".
+      There are various ways for a method or type to become "not CLS compliant". The most obvious
+      way is to use unsigned data types (like "uint") for parameters or properties. You can find
+      the whole list here: https://docs.microsoft.com/en-us/dotnet/standard/language-independence
 
-      You usually should not(!) mark a whole assembly as "not CLS compliant".
+      You can have a CLS compliant assembly that contains not CLS compliant code - by attributing the
+      not compliante code with "[CLSCompliant(false)]".
 
-      To mark this assembly as "not CLS compliant", add the property "<ClsCompliant>false</ClsCompliant>" to
-      your project file.
+      While it appears to be useful to have assemblies to be "CLS compliant" (and just attributing
+      not compliant code where needed), there is the problem of the "[CLSCompliant(false)] fallout".
+      By attributing one method or type, other methods or type may then also need be attributed, then
+      other again and so forth. It's the same effect that you have by adding "IDisposable" to an
+      existing type or "async" to an existing method. This problem is also magnified by the fact that,
+      in interfaces, you can't just attribute a single member with "[CLSCompliant(false)]" but you have
+      to attribute the whole interface in this case (which then makes implementers of this interface
+      also not compliant).
 
-      For details, see:
-      * https://docs.microsoft.com/en-us/dotnet/standard/language-independence
-      * https://docs.microsoft.com/en-us/dotnet/fundamentals/code-analysis/quality-rules/CA1014
+      While it's easy to avoid using unsigned data types, using "IConvertible" (for performance reasons)
+      also makes the method/type not CLS compliant. Not being able to use "IConvertible" is a big disadvantage
+      of CLS compliant libraries. Sure, there are "creative" ways to work around this problem but in the
+      end they often lead to less optimal APIs.
+
+      Because of all of this, and because AppMotor projects only target C# code, it was decided to mark
+      all assemblies as "not CLS compliant" (which is also the default for C# libraries). This makes
+      writing code easier and less painful.
+
+      See also: https://docs.microsoft.com/en-us/dotnet/fundamentals/code-analysis/quality-rules/CA1014
     -->
     <AssemblyAttribute Include="System.CLSCompliantAttribute">
-        <_Parameter1 Condition=" '$(ClsCompliant)' != 'false' ">true</_Parameter1>
-        <_Parameter1 Condition=" '$(ClsCompliant)' == 'false' ">false</_Parameter1>
+        <_Parameter1 Condition=" '$(ClsCompliant)' == 'true' ">true</_Parameter1>
+        <_Parameter1 Condition=" '$(ClsCompliant)' != 'true' ">false</_Parameter1>
     </AssemblyAttribute>
   </ItemGroup>
 
