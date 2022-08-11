@@ -156,4 +156,17 @@
     <GlobalAnalyzerConfigFiles Include="$(MSBuildThisFileDirectory)CA.globalconfig" />
   </ItemGroup>
 
+  <!--
+    JetBrains/ReSharper annoation must be explicitely enabled to be compiled into the resulting binary.
+
+    Can be disabled through <EmbedJetbrainsAnnotations>false</EmbedJetbrainsAnnotations>.
+
+    See: https://www.jetbrains.com/help/resharper/Code_Analysis__Annotations_in_Source_Code.html#embedding-declarations-of-code-annotations-in-your-source-code
+  -->
+  <Target Name="_EmbedJetbrainsAnnotations" BeforeTargets="GetAssemblyAttributes" Condition=" '$(EmbedJetbrainsAnnotations)' != 'false' ">
+    <PropertyGroup Label="JetBrains.Annotations">
+      <DefineConstants >$(DefineConstants);JETBRAINS_ANNOTATIONS</DefineConstants>
+    </PropertyGroup>
+  </Target>
+
 </Project>
