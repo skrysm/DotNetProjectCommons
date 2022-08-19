@@ -149,6 +149,17 @@
       See: https://docs.microsoft.com/en-us/dotnet/core/project-sdk/msbuild-props#analysismode
     -->
     <AnalysisMode>AllEnabledByDefault</AnalysisMode>
+
+    <!--
+      Adds a report to the build log which shows which rule took how long. This can be used to diagnose 
+      which rules make the build slow. Note, however, that rules are evaluated in parallel - so the 
+      reported times are not 100% accurate/reliable.
+
+      Requires log level "Detailed". Search for "Total analyzer execution time" in the build log.
+
+      See: https://github.com/dotnet/roslyn/blob/main/docs/analyzers/Report%20Analyzer%20Format.md
+    -->
+    <ReportAnalyzer>true</ReportAnalyzer>
   </PropertyGroup>
 
   <ItemGroup Label="Code Analysis">
