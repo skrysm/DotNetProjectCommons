@@ -151,8 +151,8 @@
     <AnalysisMode>AllEnabledByDefault</AnalysisMode>
 
     <!--
-      Adds a report to the build log which shows which rule took how long. This can be used to diagnose 
-      which rules make the build slow. Note, however, that rules are evaluated in parallel - so the 
+      Adds a report to the build log which shows which rule took how long. This can be used to diagnose
+      which rules make the build slow. Note, however, that rules are evaluated in parallel - so the
       reported times are not 100% accurate/reliable.
 
       Requires log level "Detailed". Search for "Total analyzer execution time" in the build log.
