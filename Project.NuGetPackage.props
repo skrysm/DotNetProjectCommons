@@ -19,8 +19,7 @@
     Additional properties to specify on each project: <Description>, <Authors>, <PackageLicenseExpression>, <RepositoryUrl>
 
     See:
-    * https://docs.microsoft.com/en-us/dotnet/core/tools/csproj#nuget-metadata-properties
-    * https://docs.microsoft.com/en-us/nuget/reference/msbuild-targets#pack-target
+    * https://learn.microsoft.com/en-us/nuget/reference/msbuild-targets#pack-target
     * https://docs.microsoft.com/en-us/nuget/reference/nuspec
 
     For valid license expressions, see: https://spdx.org/licenses/
@@ -119,7 +118,7 @@
   <!--
     Adds/Fills the NuGet package properties that must be calculated dynamically.
 
-    See also: https://docs.microsoft.com/en-us/dotnet/core/tools/csproj#nuget-metadata-properties
+    See also: https://learn.microsoft.com/en-us/nuget/reference/msbuild-targets#pack-target
   -->
   <Target Name="_AddDynamicNuGetPackageProperties" BeforeTargets="GenerateNuspec">
     <!--
