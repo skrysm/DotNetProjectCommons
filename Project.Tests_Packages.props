@@ -9,17 +9,14 @@
 <Project>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.3.2" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.8.0" />
 
-    <PackageReference Include="xunit.core" Version="2.4.2" />
-    <!-- The analyzers provide (compile-time) checks for example for [InlineData]. -->
-    <PackageReference Include="xunit.analyzers" Version="1.0.0" />
-    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.5" PrivateAssets="all" />
+    <PackageReference Include="xunit" Version="2.6.1" />
 
     <!-- Helpful libraries for testing. -->
-    <PackageReference Include="Moq" Version="4.18.2" />
-    <PackageReference Include="Shouldly" Version="4.1.0" />
-    <PackageReference Include="System.IO.Abstractions.TestingHelpers" Version="17.2.3" />
+    <PackageReference Include="Moq" Version="4.20.69" />
+    <PackageReference Include="Shouldly" Version="4.2.1" />
+    <PackageReference Include="System.IO.Abstractions.TestingHelpers" Version="19.2.69" />
   </ItemGroup>
 
 </Project>
