@@ -57,10 +57,12 @@ indent_size = 2
 end_of_line = crlf
 
 
+#################################################################################
+
 #
 # .props files
 #
-[*.{props,targets}]
+[*.{props,targets,tasks}]
 # BOM is supported.
 charset = utf-8-bom
 
