@@ -2,13 +2,13 @@
 #
 # .NET Code Analysis (CA) Rules
 #
-# For configuration options, see: https://docs.microsoft.com/en-us/dotnet/fundamentals/code-analysis/configuration-options
+# For configuration options, see: https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/configuration-options
 #
-# For each rule, see: https://docs.microsoft.com/en-us/dotnet/fundamentals/code-analysis/quality-rules/caXXXX
+# For each rule, see: https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/quality-rules/caXXXX
 #
 # The Roslyn Analyzers project: https://github.com/dotnet/roslyn-analyzers
 #
-# For details on this file type, see: https://docs.microsoft.com/en-us/dotnet/fundamentals/code-analysis/configuration-files?view=vs-2019#global-analyzerconfig
+# For details on this file type, see: https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/configuration-files#global-analyzerconfig
 #
 # You can find the latest version of this file here: https://github.com/skrysmanski/AppMotor.StyleGuide
 #
