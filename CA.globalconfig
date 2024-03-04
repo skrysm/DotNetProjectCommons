@@ -53,6 +53,14 @@ dotnet_diagnostic.CA1307.severity = none
 #   this rule is supposed to prevent.)
 dotnet_diagnostic.CA1308.severity = none
 
+# CA1512: Use ArgumentOutOfRangeException throw helper
+# Reason: Using the helper class makes the code more difficult to read.
+dotnet_diagnostic.CA1512.severity = none
+
+# CA1513: Use ObjectDisposedException throw helper
+# Reason: Using the helper class makes the code more difficult to read.
+dotnet_diagnostic.CA1513.severity = none
+
 # CA1700: Do not name enum values 'Reserved'
 # Reason: Left over from old "worst-pratice" implementations. We don't do this. If left enabled it
 #   prevents naming an enum member "ReservedName", even though this is a valid name.
