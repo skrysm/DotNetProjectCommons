@@ -13,10 +13,11 @@
 
     <PackageReference Include="xunit" Version="2.7.0" />
 
-    <!-- Helpful libraries for testing. -->
+    <!-- Helpful libraries for testing.
+         NOTE: Only add "standalone" packages - i.e. packages don't have any dependencies (other than .NET).
+    -->
     <PackageReference Include="Moq" Version="4.20.70" />
     <PackageReference Include="Shouldly" Version="4.2.1" />
-    <PackageReference Include="System.IO.Abstractions.TestingHelpers" Version="20.0.15" />
   </ItemGroup>
 
 </Project>
