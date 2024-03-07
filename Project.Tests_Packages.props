@@ -12,6 +12,8 @@
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.9.0" />
 
     <PackageReference Include="xunit" Version="2.7.0" />
+    <!-- Required to be able to run the tests via "dotnet test". -->
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.5.7" PrivateAssets="all" />
 
     <!-- Helpful libraries for testing.
          NOTE: Only add "standalone" packages - i.e. packages don't have any dependencies (other than .NET).
