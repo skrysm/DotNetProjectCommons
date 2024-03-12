@@ -16,6 +16,11 @@
 
 is_global = true
 
+# CA1000: Do not declare static members on generic types
+# Reason: The rule's primary goal is code ease-of-use (which can be a matter of taste) but it also interfers
+#   with static interface members (see: https://github.com/dotnet/roslyn-analyzers/issues/6424).
+dotnet_diagnostic.CA1000.severity = none
+
 # CA1031: Do not catch general exception types
 # Reason: There are lots of places (especially in reusable library code) that make catching "Exception"
 #   necessary/useful. In my experience with this rule, it's suppressed 99% of the time - making it more of
