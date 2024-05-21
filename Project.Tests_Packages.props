@@ -16,7 +16,11 @@
     <PackageReference Include="xunit.runner.visualstudio" Version="2.5.7" PrivateAssets="all" />
 
     <!-- Helpful libraries for testing.
-         NOTE: Only add "standalone" packages - i.e. packages don't have any dependencies (other than .NET).
+
+         NOTE: Only add pure testing package that don't require any production code packages (other than .NET).
+           This disqualifies, for example, "TestableIO.System.IO.Abstractions.TestingHelpers" as this package's
+           version depends on the version of "TestableIO.System.IO.Abstractions" used by the production code
+           project (and thus can't be updated independently).
     -->
     <PackageReference Include="Moq" Version="4.20.70" />
     <PackageReference Include="Shouldly" Version="4.2.1" />
