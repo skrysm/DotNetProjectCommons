@@ -21,7 +21,7 @@
   </PropertyGroup>
 
   <!--
-    Make copyright based on assembly name (a best pratice for open source projects).
+    Make copyright based on assembly name (the best pratice for open source projects).
 
     For some more details on copyrights in open source projects, see:
     * https://www.linuxfoundation.org/blog/2020/01/copyright-notices-in-open-source-software-projects/

@@ -36,7 +36,7 @@
   </PropertyGroup>
 
   <!--
-    Make copyright based on assembly name (a best pratice for open source projects).
+    Make copyright based on assembly name (the best pratice for open source projects).
 
     For some more details on copyrights in open source projects, see:
     * https://www.linuxfoundation.org/blog/2020/01/copyright-notices-in-open-source-software-projects/
@@ -145,7 +145,7 @@
   -->
   <PropertyGroup Label="Code Analysis">
     <!--
-      Enable all CA rules by default. Otherwise only a small subset will be enabled by default.
+      Enable all CA rules by default. Otherwise, only a small subset will be enabled by default.
       See: https://docs.microsoft.com/en-us/dotnet/core/project-sdk/msbuild-props#analysismode
     -->
     <AnalysisMode>AllEnabledByDefault</AnalysisMode>

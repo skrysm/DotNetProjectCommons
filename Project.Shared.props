@@ -39,7 +39,7 @@
       high chance that you don't just publish for one target platform - and in this case this property
       must be "true".
 
-      NOTE: "true" is the default value but we leave the definition here so that the name of this property
+      NOTE: "true" is the default value, but we leave the definition here so that the name of this property
         is documentation (since it's so similar to "AppendTargetFrameworkToOutputPath").
     -->
     <AppendRuntimeIdentifierToOutputPath>true</AppendRuntimeIdentifierToOutputPath>
@@ -54,7 +54,7 @@
     <!--
       Assume git by default.
 
-      NOTE: This property controls various things and thus you should make sure it's correct.
+      NOTE: This property controls various things, and thus you should make sure it's correct.
       NOTE 2: The name of this property is pre-defined. See: https://docs.microsoft.com/en-us/dotnet/core/tools/csproj#nuget-metadata-properties
     -->
     <RepositoryType Condition=" '$(RepositoryType)' == '' ">git</RepositoryType>
