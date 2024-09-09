@@ -196,6 +196,13 @@ Validate.ArgumentWithName($NAME$).IsNotNull($EXPR$);</s:String>
 	<s:String x:Key="/Default/GrammarAndSpelling/GrammarChecking/RulesStates/=LanguageTool_002EEN_002EFILL_005FOF_005FWITH/@EntryIndexedValue">DisabledByUser</s:String>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/Todo/TodoPatterns/=4386F01B791C56499C7EA059B55FFB54/CaseSensitive/@EntryValue">True</s:Boolean>
 	<s:String x:Key="/Default/PatternsAndTemplates/Todo/TodoPatterns/=4386F01B791C56499C7EA059B55FFB54/Pattern/@EntryValue">(?&lt;=\W|^)(?&lt;TAG&gt;BUG(?: \#(?&lt;ISSUE_ID&gt;\d+))?)(\W|$)(.*)</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/Todo/TodoPatterns/=8E0653A0A34631418AE621C8D40357BE/@KeyIndexDefined">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/Todo/TodoPatterns/=8E0653A0A34631418AE621C8D40357BE/CaseSensitive/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/Todo/TodoPatterns/=8E0653A0A34631418AE621C8D40357BE/Color/@EntryValue">#FFCF9D32</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/Todo/TodoPatterns/=8E0653A0A34631418AE621C8D40357BE/MatchComments/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/Todo/TodoPatterns/=8E0653A0A34631418AE621C8D40357BE/Name/@EntryValue">CLARIFY</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/Todo/TodoPatterns/=8E0653A0A34631418AE621C8D40357BE/Pattern/@EntryValue">(?&lt;=\W|^)(?&lt;TAG&gt;CLARIFY)(\W|$)(.*)</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/Todo/TodoPatterns/=8E0653A0A34631418AE621C8D40357BE/TodoIconStyle/@EntryValue">Question</s:String>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/Todo/TodoPatterns/=961894CCC510410ABE2B99132B253C80/CaseSensitive/@EntryValue">True</s:Boolean>
 	<s:String x:Key="/Default/PatternsAndTemplates/Todo/TodoPatterns/=961894CCC510410ABE2B99132B253C80/Pattern/@EntryValue">(?&lt;=\W|^)(?&lt;TAG&gt;TODO(?: \#(?&lt;ISSUE_ID&gt;\d+))?)(\W|$)(.*)</s:String>
 	<s:Boolean x:Key="/Default/UserDictionary/Words/=bools/@EntryIndexedValue">True</s:Boolean>
