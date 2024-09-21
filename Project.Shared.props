@@ -28,7 +28,7 @@
     <NeutralLanguage>en-US</NeutralLanguage>
 
     <!--
-      Don't append "net5.0" (or the like) to the output path (i.e. keep it as "bin\Debug" or "bin\Release".
+      Don't append "net5.0" (or the like) to the output path (i.e. keep it as "bin\Debug" or "bin\Release").
       You may set this to "true" in your project if you're building against multiple target frameworks.
     -->
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
