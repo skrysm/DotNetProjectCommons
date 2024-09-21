@@ -4,8 +4,6 @@
 #
 # For configuration options, see: https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/configuration-options
 #
-# For each rule, see: https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/quality-rules/caXXXX
-#
 # The Roslyn Analyzers project: https://github.com/dotnet/roslyn-analyzers
 #
 # For details on this file type, see: https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/configuration-files#global-analyzerconfig
@@ -22,6 +20,13 @@ is_global = true
 #   <TreatWarningsAsErrors>false</TreatWarningsAsErrors> and still see the issues - without them breaking
 #   the build.
 dotnet_analyzer_diagnostic.severity = warning
+
+
+#################################################################################
+#
+# Code Analysis Rules (CAXXXX): https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/quality-rules/caXXXX
+#
+#################################################################################
 
 # CA1000: Do not declare static members on generic types
 # Reason: The rule's primary goal is code ease-of-use (which can be a matter of taste) but it also interfers
@@ -104,3 +109,85 @@ dotnet_diagnostic.CA1848.severity = none
 #   is "It's provided for developers who program in languages that do not support overloaded operators." but
 #   we don't really care about these language (whatever they are).
 dotnet_diagnostic.CA2225.severity = none
+
+
+#################################################################################
+#
+# Code Style Rules (IDEXXXX): https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/style-rules/ideXXXX
+#
+# NOTE: Only very few rules are useful all the time. Most rules are just situational. Any rule that's disabled
+#   below without mentioning a specific reason, means that this rule is disabled because it's too situational.
+#
+#################################################################################
+
+# IDE0007: Use var instead of explicit type
+dotnet_diagnostic.IDE0007.severity = none
+# IDE0008: Use explicit type instead of var
+dotnet_diagnostic.IDE0008.severity = none
+
+# IDE0010: Add missing cases to switch statement
+dotnet_diagnostic.IDE0010.severity = none
+
+# IDE0022: Use expression body for methods
+dotnet_diagnostic.IDE0022.severity = none
+
+# IDE0028: Use collection initializers or expressions
+# Reason: While generally useful, collection expressions are primarily a way to make code
+# simpler to write - but rewriting existing code shouldn't be mandatory. Also, we use
+# ReSharper to make this work.
+dotnet_diagnostic.IDE0028.severity = none
+
+# IDE0045: Use conditional expression for assignment
+dotnet_diagnostic.IDE0045.severity = none
+# IDE0046: Use conditional expression for return
+dotnet_diagnostic.IDE0046.severity = none
+
+# IDE0055: Formatting rule
+# Reason: Unfortunately, this rule fails when case blocks in switch statements
+# use curly braces. So, we have to disable this rule.
+dotnet_diagnostic.IDE0055.severity = none
+
+# IDE0058: Remove unnecessary expression value
+# Reason: Fails if a return value is not used. Creates an issue for every method
+# in StringBuilder. Thus, not very useful.
+dotnet_diagnostic.IDE0058.severity = none
+
+# IDE0066: Use switch expression
+dotnet_diagnostic.IDE0066.severity = none
+
+# IDE0072: Add missing cases to switch expression
+# Reason: There are often exceptions to this rule.
+dotnet_diagnostic.IDE0072.severity = none
+
+# IDE0074: Use compound assignment
+dotnet_diagnostic.IDE0074.severity = none
+
+# IDE0078: Use pattern matching
+dotnet_diagnostic.IDE0078.severity = none
+
+# IDE0130: Namespace does not match folder structure
+# Reason: This one is a difficult one - but in the end it was disabled because it's
+# more pratical this way - for the following reasons:
+#
+# * ReSharper also provides a check for this. So, if we want to disable this issue
+#   for a file, we require 3 lines (1 for ReShaprer, 2 for the Roslyn Analyzers).
+# * ReSharper provides a way to mark as folder as "not a namespace provider". The
+#   Roslyn Analyzer don't have such a feature - so, we can't simply disable the
+#   ReSharper rule.
+# * This issue is not raised very often, so this Roslyn Analyzers check wouldn't be
+#   that helpful very often. On the other hand, we can set the ReSharper rule severity
+#   to "Warning" to get a good compromise.
+dotnet_diagnostic.IDE0130.severity = none
+
+# IDE0270: Null check can be simplified (via ?? operator)
+# Reason: This is sometimes not very readable if the nullable expression is rather long.
+dotnet_diagnostic.IDE0270.severity = none
+
+# IDE0290: Use primary constructor
+dotnet_diagnostic.IDE0290.severity = none
+
+# IDE0305: Use collection initializers or expressions
+# Reason: While generally useful, collection expressions are primarily a way to make code
+# simpler to write - but rewriting existing code shouldn't be mandatory. Also, we use
+# ReSharper to make this work.
+dotnet_diagnostic.IDE0305.severity = none

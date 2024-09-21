@@ -151,6 +151,11 @@
     <AnalysisMode>All</AnalysisMode>
 
     <!--
+      Enable all IDEXXXX rules.
+    -->
+    <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
+
+    <!--
       Adds a report to the build log which shows which rule took how long. This can be used to diagnose
       which rules make the build slow. Note, however, that rules are evaluated in parallel - so the
       reported times are not 100% accurate/reliable.

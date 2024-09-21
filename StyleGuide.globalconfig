@@ -19,3 +19,9 @@ dotnet_style_qualification_for_event = true:suggestion
 
 dotnet_sort_system_directives_first = true:suggestion
 dotnet_separate_import_directive_groups = true:suggestion
+
+csharp_style_namespace_declarations = file_scoped
+
+# https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/style-rules/ide0047-ide0048
+# Reason: Not always useful.
+dotnet_style_parentheses_in_relational_binary_operators = never_if_unnecessary
