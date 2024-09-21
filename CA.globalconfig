@@ -16,6 +16,13 @@
 
 is_global = true
 
+# Set the default severity for all rules to "warning".
+#
+# NOTE: By setting it to "warning" instead of "error", projects under active development can set their
+#   <TreatWarningsAsErrors>false</TreatWarningsAsErrors> and still see the issues - without them breaking
+#   the build.
+dotnet_analyzer_diagnostic.severity = warning
+
 # CA1000: Do not declare static members on generic types
 # Reason: The rule's primary goal is code ease-of-use (which can be a matter of taste) but it also interfers
 #   with static interface members (see: https://github.com/dotnet/roslyn-analyzers/issues/6424).
@@ -40,14 +47,6 @@ dotnet_diagnostic.CA1040.severity = none
 #   One could argue that this rule is still useful for consumers with NRT disabled - but we simply require NRT to
 #   be enabled for consumer and reduce the noise of this rule by disabling it.
 dotnet_diagnostic.CA1062.severity = none
-
-# CA1303: Do not pass literals as localized parameters
-# Reason: Library projects should have this enabled and provide a LocalizableResources.resx file (Resources File) for the
-#   texts they display to the user (English-only is sufficient; internal visibility is sufficient). This way they
-#   can later be translated by consumers of this library, if they want the texts in other languages as well. Application
-#   projects, on the other hand, may want to set this to "none" (possibly in a separate .editorconfig file) if there is
-#   no plan to translate the application into other languages.
-dotnet_diagnostic.CA1303.severity = error
 
 # CA1307: Specify StringComparison for clarity
 # Reason: Creates too much noise (this is actually the reason why CA1307 was extracted from CA1310).
