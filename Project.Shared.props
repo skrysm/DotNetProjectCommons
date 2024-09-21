@@ -46,7 +46,13 @@
 
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <WarningsAsErrors></WarningsAsErrors>
-    <NoWarn></NoWarn>
+    <!--
+      Disable the following warnings:
+
+      * SYSLIB1045: Use GeneratedRegexAttribute to generate the regular expression implementation at compile time.
+        Reason: Not very pratical (at the moment).
+    -->
+    <NoWarn>SYSLIB1045</NoWarn>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
 
