@@ -148,7 +148,7 @@
       Enable all CA rules by default. Otherwise, only a small subset will be enabled by default.
       See: https://learn.microsoft.com/en-us/dotnet/core/project-sdk/msbuild-props#analysismode
     -->
-    <AnalysisMode>AllEnabledByDefault</AnalysisMode>
+    <AnalysisMode>All</AnalysisMode>
 
     <!--
       Adds a report to the build log which shows which rule took how long. This can be used to diagnose
