@@ -5,7 +5,7 @@
   NOTE: Do not include directly. Use one of the other .props files instead.
 
 -->
-<!-- You can find the latest version of this file here: https://github.com/skrysmanski/base-dotnet -->
+<!-- You can find the latest version of this file here: https://github.com/skrysm/DotNetProjectCommons -->
 <Project>
 
   <PropertyGroup Label="Project Settings">

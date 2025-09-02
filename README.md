@@ -4,14 +4,14 @@ This repository contains common project settings and coding style guide files fo
 
 ## How to use it
 
-The easiest way to use this repository is to use the <https://github.com/skrysmanski/base-dotnet> repository as base.
+The easiest way to use this repository is to use the <https://github.com/skrysm/base-dotnet> repository as base.
 
 If you can't do this, use the following steps:
 
 First, this repository must be included in a project as a **git submodule**. To do this, call this command in your project root directory:
 
 ```sh
-git submodule add https://github.com/skrysmanski/DotNetProjectCommons.git _ProjectCommons
+git submodule add https://github.com/skrysm/DotNetProjectCommons.git _ProjectCommons
 ```
 
 Then add a file named `Directory.Build.props` to your project root directory and add the following contents:

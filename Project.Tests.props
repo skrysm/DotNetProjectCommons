@@ -8,7 +8,7 @@
     <Import Project="$(ProjectCommonsDirectory)Project.Tests.props" />
 
 -->
-<!-- You can find the latest version of this file here: https://github.com/skrysmanski/base-dotnet -->
+<!-- You can find the latest version of this file here: https://github.com/skrysm/DotNetProjectCommons -->
 <Project>
 
   <Import Project="$(MSBuildThisFileDirectory)Project.Shared.props" />

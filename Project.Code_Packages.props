@@ -5,7 +5,7 @@
   This file is NOT meant to be imported directly.
 
 -->
-<!-- You can find the latest version of this file here: https://github.com/skrysmanski/base-dotnet -->
+<!-- You can find the latest version of this file here: https://github.com/skrysm/DotNetProjectCommons -->
 <Project>
 
   <ItemGroup>
