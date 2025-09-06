@@ -104,6 +104,10 @@ dotnet_diagnostic.CA1822.severity = none
 # Reason: Disabled by default because it's rather situational and because it's not currently documented.
 dotnet_diagnostic.CA1848.severity = none
 
+# CA1859: Use concrete types when possible for improved performance
+# Reason: Performance increase is rather small and not worth the effort to globally apply this.
+dotnet_diagnostic.CA1859.severity = none
+
 # CA2225: Operator overloads have named alternates
 # Reason: This rule is "nice" but makes writing operators more cumbersome. The primary reason for this rule
 #   is "It's provided for developers who program in languages that do not support overloaded operators." but
