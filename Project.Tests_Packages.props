@@ -11,13 +11,11 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.14.1" />
 
-    <PackageReference Include="xunit" Version="2.9.3" />
+    <PackageReference Include="xunit.v3" Version="3.0.1" />
     <!-- Required to be able to run the tests via "dotnet test". -->
     <PackageReference Include="xunit.runner.visualstudio" Version="3.1.4" PrivateAssets="all" />
-    <!-- Provides [SkippableFact] and "Skip....". -->
-    <PackageReference Include="Xunit.SkippableFact" Version="1.5.23" />
     <!-- Provides [RetryFact]. -->
-    <PackageReference Include="xRetry" Version="1.9.0" />
+    <PackageReference Include="xRetry.v3" Version="0.1.0-alpha2" />
 
     <!-- Helpful libraries for testing.
 
