@@ -56,6 +56,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
 
+
+  <PropertyGroup Label="VS Build Acceleration">
+
+    <!-- Enables build acceleration in Visual Studio.
+
+         See: https://github.com/dotnet/project-system/blob/main/docs/build-acceleration.md
+    -->
+    <AccelerateBuildsInVisualStudio>true</AccelerateBuildsInVisualStudio>
+
+  </PropertyGroup>
+
+
   <PropertyGroup>
     <!--
       Assume git by default.
