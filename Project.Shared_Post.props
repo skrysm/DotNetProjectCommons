@@ -1,0 +1,26 @@
+<!-- You can find the latest version of this file here: https://github.com/skrysm/DotNetProjectCommons -->
+<Project>
+
+  <!-- Sets the name ("LogicalName") of EmbeddedResource items to a relative path in Linux format - e.g., "files/my_folder/file.txt"
+       instead of "<RootNamespace>.files.my_folder.file.txt".
+
+       Enable it by setting the "PathAsLogicalName" metadata to "true":
+
+          <EmbeddedResource Include="files\**\*.*">
+            <PathAsLogicalName>true</PathAsLogicalName>
+          </EmbeddedResource>
+  -->
+  <ItemGroup Label="EmbeddedResources_PathAsLogicalName">
+    <EmbeddedResource Update="@(EmbeddedResource)">
+      <!-- IMPORTANT: Whitespace is NOT TRIMMED from the value of <LogicalName>. So each <LogicalName> definition must be in one line! -->
+
+      <!-- If "Link" is used, use its value as relative path. -->
+      <LogicalName Condition=" '%(PathAsLogicalName)' == 'true' and '%(Link)' != ''">$([System.String]::Copy('%(Link)').Replace('\','/'))</LogicalName>
+      <!-- Otherwise use project-relative path. -->
+      <LogicalName Condition=" '%(PathAsLogicalName)' == 'true' and '%(Link)' == ''">$([System.String]::Copy($([MSBuild]::MakeRelative('$(MSBuildProjectDirectory)','%(FullPath)'))).Replace('\','/'))</LogicalName>
+
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>
+
