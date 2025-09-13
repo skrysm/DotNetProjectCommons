@@ -46,9 +46,9 @@
     <GeneratePackageOnBuild Condition="'$(Configuration)' == 'Release'">true</GeneratePackageOnBuild>
 
     <!--
-      Generate XML documentation (to be included in the NuGet package).
+      Enable full XML documentation - to be included in the NuGet package.
     -->
-    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <EnforceFullDocumentation>true</EnforceFullDocumentation>
   </PropertyGroup>
 
   <!--

@@ -57,6 +57,33 @@
   </PropertyGroup>
 
 
+  <PropertyGroup Label="Documentation">
+
+    <!-- NOTE: By enabling the generation of documentation xml files, the compiler can check them for errors (like XML errors or
+           broken links).
+         NOTE 2: Due to a "bug", the CA rule IDE0005 can only be reliably checked if the documentation is generated.
+           See https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/style-rules/ide0005 and
+           https://github.com/dotnet/roslyn/issues/41640
+    -->
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+
+    <!-- CS0419: Ambiguous reference in cref attribute (https://learn.microsoft.com/en-us/dotnet/csharp/misc/cs0419)
+         This is mostly caused by method overloads - it's not that critical but often difficult to solve; thus
+         we ignore this warning.
+    -->
+    <NoWarn>$(NoWarn);CS0419</NoWarn>
+
+  </PropertyGroup>
+
+  <!-- NOTE: We only enforce a full(!) documentation on projects with <EnforceFullDocumentation> set to 'true'. -->
+  <Target Name="_DisableMissingDocumentationWarning" BeforeTargets="CoreCompile" Condition=" '$(EnforceFullDocumentation)' != 'true' ">
+    <PropertyGroup>
+      <!-- CS1591: Missing documentation (https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/compiler-messages/cs1591) -->
+      <NoWarn>$(NoWarn);CS1591</NoWarn>
+    </PropertyGroup>
+  </Target>
+
+
   <PropertyGroup Label="VS Build Acceleration">
 
     <!-- Enables build acceleration in Visual Studio.
